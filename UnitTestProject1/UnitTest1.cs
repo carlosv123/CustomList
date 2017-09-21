@@ -37,10 +37,28 @@ namespace UnitTestProject1
         public void CheckZeroIndex()
         {
             CustomList<int> list = new CustomList<int>();
-            int expted = 16;
+            int expected = 16;
+
+            list.Add(16);
+            list.Add(29);
+
+            Assert.AreEqual(expected, list[0]);
 
 
         }
+        public void removeOneNumber()
+        {
+            CustomList<int> list = new CustomList<int>();
+            int expected = 0;
+
+            list.Add(23);
+            list.Remove(23);
+
+            Assert.AreEqual(expected, list.count);
+        }
+        
+
+
 
     }
 }
