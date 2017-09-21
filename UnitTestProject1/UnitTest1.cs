@@ -21,6 +21,26 @@ namespace UnitTestProject1
             //assert
             Assert.AreEqual(expected, list[0]);
         }
+        public void addTwoNumbers()
+        {
+            //arrange
+            CustomList<int> list = new CustomList<int>();
+            int expected = 20;
+
+            //act 
+            list.Add(16);
+            list.Add(20);
+
+            //assert
+            Assert.AreEqual(expected, list[1]);
+        }
+        public void CheckZeroIndex()
+        {
+            CustomList<int> list = new CustomList<int>();
+            int expted = 16;
+
+
+        }
 
     }
 }
