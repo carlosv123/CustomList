@@ -7,7 +7,7 @@ namespace UnitTestProject1
     public class UnitTest1
     {
         [TestMethod]
-        public void ddOneNumber()
+        public void addOneNumber()
         {
             //arrange
             CustomList<int> list = new CustomList<int>();
@@ -86,10 +86,21 @@ namespace UnitTestProject1
             listString.Remove("hey");
 
             Assert.AreEqual(expected, listString.count);
+         }
+        public void overrideToString()
+        {
+            CustomList<String> newString = new CustomList<string>();
+            newString.Add("hello");
+            newString.Add("world");
 
+            string expected = ("hello world");
+            string actualresult = newString.ToString();
 
-            
+            Assert.AreEqual(expected, actualresult);
         }
+        public void  
+        
+
          
 
 
