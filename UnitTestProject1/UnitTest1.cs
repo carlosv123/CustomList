@@ -46,6 +46,16 @@ namespace UnitTestProject1
 
 
         }
+        public void addString()
+        {
+            CustomList<string> stringList = new CustomList<string>();
+            string expected = "bottle";
+
+            stringList.Add("bottle");
+
+            Assert.AreEqual(expected, stringList[0]);
+
+        }
         public void removeOneNumber()
         {
             CustomList<int> list = new CustomList<int>();
@@ -56,7 +66,31 @@ namespace UnitTestProject1
 
             Assert.AreEqual(expected, list.count);
         }
-        
+        public void removeOneNumberFromList()
+        {
+            CustomList<int> list = new CustomList<int>();
+            int expected = 1;
+
+            list.Add(1);
+            list.Add(2);
+            list.Remove(2);
+
+            Assert.AreEqual(expected, list.count);
+        }
+         public void removeOneString()
+        {
+            CustomList<string> listString = new CustomList<string>();
+            string expected = "hey";
+
+            listString.Add("hey");
+            listString.Remove("hey");
+
+            Assert.AreEqual(expected, listString.count);
+
+
+            
+        }
+         
 
 
 
