@@ -1,10 +1,11 @@
-﻿using System;
+﻿using System;[
+\=
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CustomListProject;
 namespace UnitTestProject1
 {
     [TestClass]
-    public class UnitTest1
+    public class List_Testing
     {
         [TestMethod]
         public void Add_One_Number()
@@ -17,7 +18,6 @@ namespace UnitTestProject1
             // act
 
             list.Add(16);
-
             //assert
             Assert.AreEqual(expected, list[0]);
         }
@@ -51,7 +51,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void Add_String()
         {
-            CustomList<string> stringList = new CustomList<string>();
+            CustomList<string> item = new CustomList<string>();
             string expected = "bottle";
 
             stringList.Add("bottle");
@@ -68,7 +68,7 @@ namespace UnitTestProject1
             list.Add(23);
             list.Remove(23);
 
-            Assert.AreEqual(expected, list.count);
+            Assert.AreEqual(expected, list.Count);
         }
         [TestMethod]
         public void Remove_OneNumber_From_List()
@@ -80,7 +80,7 @@ namespace UnitTestProject1
             list.Add(2);
             list.Remove(2);
 
-            Assert.AreEqual(expected, list.count);
+            Assert.AreEqual(expected list[0]);
         }
         [TestMethod]
         public void Remove_OneInt_IntNotInLiist()
@@ -156,20 +156,22 @@ namespace UnitTestProject1
         }
         [TestMethod]
         public void Zip_Test()
-        {
+        {//Arrange
             CustomList<string> One = new CustomList<string>();
             CustomList<string> two = new CustomList<string>();
 
-            One.Add("he", "go", "mor");
+            One.Add("he", "go", "mor", "dude");
             two.Add("llo", "ood", "ning");
 
-            string expected =("hello", "good", "morning");
-            int actualresult = zip();
-
-            Assert.AreEqual(expected, zip());
+            CustomList<string> expected = new CustomList<string>() { "hello", "good", "morning" };
+            //Act
+            int actualresult = One.Zip(two);
+            //Assert
+            Assert.AreEqual(expected, actualresult);
         }
 
 
     }
 }
 
+            r

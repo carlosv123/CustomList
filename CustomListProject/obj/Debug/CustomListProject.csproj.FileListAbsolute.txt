@@ -1,2 +1,7 @@
 C:\Users\vasqu\Desktop\CustomListProject\CustomListProject\bin\Debug\CustomListProject.exe.config
 C:\Users\vasqu\Desktop\CustomListProject\CustomList\CustomListProject\bin\Debug\CustomListProject.exe.config
+C:\Users\vasqu\Desktop\CustomListProject\CustomList\CustomListProject\bin\Debug\CustomListProject.exe
+C:\Users\vasqu\Desktop\CustomListProject\CustomList\CustomListProject\bin\Debug\CustomListProject.pdb
+C:\Users\vasqu\Desktop\CustomListProject\CustomList\CustomListProject\obj\Debug\CustomListProject.csprojResolveAssemblyReference.cache
+C:\Users\vasqu\Desktop\CustomListProject\CustomList\CustomListProject\obj\Debug\CustomListProject.exe
+C:\Users\vasqu\Desktop\CustomListProject\CustomList\CustomListProject\obj\Debug\CustomListProject.pdb
