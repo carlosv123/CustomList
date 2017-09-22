@@ -98,7 +98,27 @@ namespace UnitTestProject1
 
             Assert.AreEqual(expected, actualresult);
         }
-        public void  
+        public void overloadPlusOperator()
+        {
+            CustomList<string> one = new CustomList<string>();
+            CustomList<string> Two = new CustomList<string>();
+            CustomList<string> three = new CustomList<string>();
+
+            one.Add("hello");
+            Two.Add("world");
+
+            string expected = ("hello world");
+            string actualresult = one + Two;
+            // three = one + two;
+
+            Assert.AreEqual(expected, actualresult);
+        }
+        public void overloadMinusOperator()
+        {
+            CustomList<string> onelist = new CustomList<string>();
+            CustomList<string> twolist = new CustomList<string>();
+        }
+        
         
 
          
