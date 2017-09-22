@@ -21,6 +21,7 @@ namespace UnitTestProject1
             //assert
             Assert.AreEqual(expected, list[0]);
         }
+        [TestMethod]
         public void addTwoNumbers()
         {
             //arrange
@@ -34,6 +35,7 @@ namespace UnitTestProject1
             //assert
             Assert.AreEqual(expected, list[1]);
         }
+        [TestMethod]
         public void CheckZeroIndex()
         {
             CustomList<int> list = new CustomList<int>();
@@ -46,6 +48,7 @@ namespace UnitTestProject1
 
 
         }
+        [TestMethod]
         public void addString()
         {
             CustomList<string> stringList = new CustomList<string>();
@@ -56,6 +59,7 @@ namespace UnitTestProject1
             Assert.AreEqual(expected, stringList[0]);
 
         }
+        [TestMethod]
         public void removeOneNumber()
         {
             CustomList<int> list = new CustomList<int>();
@@ -66,6 +70,7 @@ namespace UnitTestProject1
 
             Assert.AreEqual(expected, list.count);
         }
+        [TestMethod]
         public void removeOneNumberFromList()
         {
             CustomList<int> list = new CustomList<int>();
@@ -77,7 +82,8 @@ namespace UnitTestProject1
 
             Assert.AreEqual(expected, list.count);
         }
-         public void removeOneString()
+        [TestMethod]
+        public void removeOneString()
         {
             CustomList<string> listString = new CustomList<string>();
             string expected = "hey";
@@ -87,6 +93,7 @@ namespace UnitTestProject1
 
             Assert.AreEqual(expected, listString.count);
          }
+        [TestMethod]
         public void overrideToString()
         {
             CustomList<String> newString = new CustomList<string>();
@@ -98,6 +105,7 @@ namespace UnitTestProject1
 
             Assert.AreEqual(expected, actualresult);
         }
+        [TestMethod]
         public void overloadPlusOperator()
         {
             CustomList<string> one = new CustomList<string>();
@@ -113,10 +121,40 @@ namespace UnitTestProject1
 
             Assert.AreEqual(expected, actualresult);
         }
+        [TestMethod]
         public void overloadMinusOperator()
         {
-            CustomList<string> onelist = new CustomList<string>();
-            CustomList<string> twolist = new CustomList<string>();
+            CustomList<int> onelist = new CustomList<int>();
+            CustomList<int> twolist = new CustomList<int>();
+
+            onelist.Add(20);
+            twolist.Add(10);
+
+            int expected = (10);
+            int actualresult = onelist - twolist;
+            //onelist -= twolist;
+
+            Assert.AreEqual(expected, actualresult);
+        }
+        [TestMethod]
+        public void zipTest()
+        {
+            CustomList<int> number = new CustomList<int>();
+            CustomList<string> strings = new CustomList<string>();
+
+            strings.Add("one", "two", "three");
+            number.Add(1, 2, 3);
+
+            int expected = (1,"one",2,"two",3,"three");
+            int actualresult = number + strings;
+
+            Assert.AreEqual(expected, actualresult);
+            
+
+
+            
+
+ 
         }
         
         
