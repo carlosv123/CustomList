@@ -24,20 +24,20 @@ namespace CustomListProject
         }
         private T[] TempArray { get; set; }
 
-   
+
         public CustomList()
         {
-            TempArray= new T[capacity];
+            TempArray = new T[capacity];
             count = 0;
             capacity = 0;
         }
 
         public void Add(T item)
-        { 
-            if(count >= capacity)
+        {
+            if (count >= capacity)
             {
                 T[] Nextarray = new T[capacity];
-                for (int i = 0;i < count; i++)
+                for (int i = 0; i < count; i++)
                 {
                     Nextarray[i] = TempArray[i];
                 }
@@ -50,28 +50,62 @@ namespace CustomListProject
                 TempArray[count] = item;
                 count++;
             }
-            
-            
-        
+
+
+
         }
         public void Remove(T item)
-        {                                                   
-           for(int i = 0; i < count; i--)
+        {
+            for (int i = 0; i < count; i++)
             {
-                if (TempArray[i].Equals(item))
+                T[] Nextarray = new T[capacity];
+                for (int j = 0; j < count; i++)
                 {
-                    count--;
-                    if(count == 0)
-                    {
-                        List = new T[0];
-                    }
+                    Nextarray[i] = TempArray[i];
                 }
+                TempArray = Nextarray;
+                TempArray[count] = item;
+                count--;
             }
+             else
+            {
+                TempArray[count] = item;
+                count--;
+            }
+        }
+        public IEnumerable getenumator()
+        {
+            for (int item = 0; item < capacity; item++)
+            {
+                yield return TempArray;
+                yield return Nextarray;
+
+            }
+                
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            return item.GetEnumerator();
+        }
+        public void tostring(T item)
+        {
 
         }
-       
-       
-       
-    }
+        public void PlusOperator()
+        {
 
+        }
+        public void MinusOperator()
+        {
+
+        }
+         public void zip()
+        {
+            
+          
+    
+            
+        }
+    }
 } 
